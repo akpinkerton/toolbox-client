@@ -1,0 +1,145 @@
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #080f23;
+  --secondary: #CCD8E0;
+  --success: #1B337E;
+  --info: #BDC931;
+  --warning: #FB9B01;
+  --danger: #FF3000;
+  --light: #e8e8e8;
+  --dark: #000000;
+}
+
+/* ======================= BACKGROUNDS ======================= */
+
+.bg-primary {
+  background-color: #080f23 !important; }
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #7952B3 !important; }
+
+.bg-secondary {
+  background-color: #CCD8E0 !important; }
+
+a.bg-secondary:hover, a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #171717 !important; }
+
+.bg-success {
+  background-color: #1B337E !important; }
+
+a.bg-success:hover, a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: #012c35 !important; }
+
+.bg-info {
+  background-color: #BDC931 !important; }
+
+a.bg-info:hover, a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #0b6298 !important; }
+
+.bg-warning {
+  background-color: #FB9B01 !important; }
+
+a.bg-warning:hover, a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: #FB9B01 !important; }
+
+.bg-danger {
+  background-color: #FF3000 !important; }
+
+a.bg-danger:hover, a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: #fc0026 !important; }
+
+.bg-light {
+  background-color: #e8e8e8 !important; }
+
+a.bg-light:hover, a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #cfcfcf !important; }
+
+.bg-dark {
+  background-color: #000000 !important; }
+
+a.bg-dark:hover, a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: black !important; }
+
+.bg-white {
+  background-color: #fff !important; }
+
+.bg-transparent {
+  background-color: transparent !important; }
+
+/* ======================= BORDERS ======================= */
+
+.border {
+  border: 1px solid #dee2e6 !important; }
+
+.border-test {
+  border: 1px solid #e71a13 !important; }
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important; }
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important; }
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important; }
+
+.border-left {
+  border-left: 1px solid #dee2e6 !important; }
+
+.border-primary {
+  border: 1px solid #080f23 !important; }
+
+.border-secondary {
+  border: 1px solid #CCD8E0 !important; }
+
+.border-success {
+  border: 1px solid #1B337E !important; }
+
+.border-info {
+  border: 1px solid #BDC931 !important; }
+
+.border-warning {
+  border: 1px solid #FB9B01 !important; }
+
+.border-danger {
+  border: 1px solid #FF3000 !important; }
+
+.border-light {
+  border: 1px solid #e8e8e8 !important; }
+
+.border-dark {
+  border: 1px solid #000000 !important; }
+
+.border-white {
+  border: 1px solid #fff !important; }
+
+

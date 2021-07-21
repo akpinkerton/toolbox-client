@@ -8,7 +8,6 @@ import './braindump.css'
       <>
 THIS IS MY BRAIN DUMP
 
-<p>You are currently running in {process.env.NODE_ENV} mode.</p>
 
       </>
     )

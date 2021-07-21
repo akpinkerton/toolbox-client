@@ -17,6 +17,9 @@ function App() {
     <Switch>
 
       <div className="App">
+
+        <p>You are currently running in {process.env.NODE_ENV} mode.</p>
+
         <Navbar/>
         <div className="body">
             <Route exact path="/" component={Home} />

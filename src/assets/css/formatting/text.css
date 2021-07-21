@@ -1,0 +1,98 @@
+.text-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.text-nowrap {
+  white-space: nowrap !important; }
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-lowercase {
+  text-transform: lowercase !important; }
+
+.text-uppercase {
+  text-transform: uppercase !important; }
+
+.text-capitalize {
+  text-transform: capitalize !important; }
+
+.font-weight-light {
+  font-weight: 300 !important; }
+
+.font-weight-normal {
+  font-weight: 400 !important; }
+
+.font-weight-bold {
+  font-weight: 700 !important; }
+
+.font-italic {
+  font-style: italic !important; }
+
+.text-white {
+  color: #fff !important; }
+
+.text-primary {
+  color: #080f23 !important; }
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #7952B3 !important; }
+
+.text-secondary {
+  color: #CCD8E0 !important; }
+
+a.text-secondary:hover, a.text-secondary:focus {
+  color: #171717 !important; }
+
+.text-success {
+  color: #1B337E !important; }
+
+a.text-success:hover, a.text-success:focus {
+  color: #012c35 !important; }
+
+.text-info {
+  color: #BDC931 !important; }
+
+a.text-info:hover, a.text-info:focus {
+  color: #0b6298 !important; }
+
+.text-warning {
+  color: #FB9B01 !important; }
+
+a.text-warning:hover, a.text-warning:focus {
+  color: #FB9B01 !important; }
+
+.text-danger {
+  color: #FF3000 !important; }
+
+a.text-danger:hover, a.text-danger:focus {
+  color: #fc0026 !important; }
+
+.text-light {
+  color: #e8e8e8 !important; }
+
+a.text-light:hover, a.text-light:focus {
+  color: #cfcfcf !important; }
+
+.text-dark {
+  color: #000000 !important; }
+
+a.text-dark:hover, a.text-dark:focus {
+  color: black !important; }
+
+.text-body {
+  color: #cccccc !important; }
+
+.text-muted {
+  color: #6c757d !important; }
+
