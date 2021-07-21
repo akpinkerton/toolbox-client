@@ -6,7 +6,7 @@ import warning from './warning.png'
   export default function DevBanner() {
 
     const banner = () => {
-      if(process.env.NODE_ENV){
+      if(process.env.NODE_ENV !== "production"){
         return (
           <p className='devBanner'>
 
