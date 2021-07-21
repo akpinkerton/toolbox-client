@@ -1,0 +1,15 @@
+.devBanner {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(155, 155, 223);
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+}
+
+.env {
+  color: red;
+  text-decoration: underline;
+  background-color: blue;
+  padding: 5px;
+}

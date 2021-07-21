@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../Routes/home'
-import Sandbox from '../Routes/sadbox';
-import Gadgets from '../Routes/gadgets';
 import Resources from '../Routes/resources';
 import ReadingList from '../Routes/reading-list';
 import Templates from '../Routes/templates';
 import Navbar from './Navbar'
+
+import Sandbox from '../Routes/sadbox';
+import Gadgets from '../Routes/gadgets';
+import DevBanner from './000-Dev-Tools/dev';
 
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
 
       <div className="App">
 
-        <p>You are currently running in {process.env.NODE_ENV} mode.</p>
+<DevBanner/>
+
 
         <Navbar/>
         <div className="body">
