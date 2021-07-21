@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../Routes/01-Home'
-import Sandbox from '../Routes/Sandbox';
-import Gadgets from '../Routes/Gadgets';
-import Resources from '../Routes/02-Resources';
-import ReadingList from '../Routes/03-Reading-list';
-import Templates from '../Routes/04-Templates';
-
-
+import Home from '../Routes/home'
+import Sandbox from '../Routes/sadbox';
+import Gadgets from '../Routes/gadgets';
+import Resources from '../Routes/resources';
+import ReadingList from '../Routes/reading-list';
+import Templates from '../Routes/templates';
 import Navbar from './Navbar'
 
 
