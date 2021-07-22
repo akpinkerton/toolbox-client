@@ -1,3 +1,7 @@
+.center {
+  text-align: center !important;
+  justify-content: center !important; }
+
 
 .align-baseline {
   vertical-align: baseline !important; }

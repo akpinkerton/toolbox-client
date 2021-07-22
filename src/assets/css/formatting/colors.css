@@ -2,6 +2,7 @@
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
+  --indigo-rgb: 102, 16, 242;
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
@@ -99,9 +100,6 @@ button.bg-dark:focus {
 
 .border {
   border: 1px solid #dee2e6 !important; }
-
-.border-test {
-  border: 1px solid #e71a13 !important; }
 
 .border-top {
   border-top: 1px solid #dee2e6 !important; }
