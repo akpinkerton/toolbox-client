@@ -1,10 +1,17 @@
 .devBanner {
   text-align: center;
-  padding: 10px;
+  text-justify: center;
+  justify-content: center;
+
+  padding: 1%;
+
   background-color: rgb(155, 155, 223);
+
   color: black;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 800;
+
+  display: flex;
 }
 
 .env {
@@ -13,3 +20,35 @@
   background-color: blue;
   padding: 5px;
 }
+
+/* ====================== DEV MODE SELECTOR ====================== */
+.dev-mode-selector {
+	display: flex;
+  float: right;
+}
+
+#form-title {
+  text-align: center;
+}
+
+input, label {
+  box-sizing: border-box;
+  flex: 1;
+  user-select: none;
+  cursor: pointer;
+}
+
+#dev-slider {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  user-select: none;
+}
+
+
+
+
+
