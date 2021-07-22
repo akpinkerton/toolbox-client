@@ -5,7 +5,7 @@ import './readinglist.css'
     const[inputsRetrieved, setInputsRetrieved] = useState([]);
 
     async function getInputs() {
-      await fetch('http://localhost:2001/readinglist')
+      await fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/readinglist`)
       .then(res => res.json())
       .then(res => setInputsRetrieved(res))
     }
