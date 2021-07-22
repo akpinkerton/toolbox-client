@@ -22,8 +22,11 @@ function App() {
 
 <DevBanner/>
 
+			<h1> 	TITLE </h1>
 
         <Navbar/>
+
+        
         <div className="body">
             <Route exact path="/" component={Home} />
             <Route exact path="/sandbox" component={Sandbox} />

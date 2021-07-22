@@ -113,16 +113,16 @@ export default function ToolInput() {
     <div className="tool-input">
 
       <div className="info">
-          <div class="container" onChange={handleType}>
-            <div class="row type-buttons">
+          <div className="container" onChange={handleType}>
+            <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="resource" />
                 <label className="btn btn type" aria-pressed="true" for="resource">add resource</label>
             </div>
-            <div class="row type-buttons">
+            <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="template" />
                 <label className="btn btn type" for="template">add template</label>
             </div>
-            <div class="row type-buttons">
+            <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="research" />
                 <label className="btn btn type" for="research">add research item</label>
             </div>
