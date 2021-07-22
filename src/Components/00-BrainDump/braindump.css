@@ -1,0 +1,97 @@
+
+.tool-input {
+  background: url('../../assets/img/galaxy.jpeg');
+  background-size: 100%;
+  width: 80%;
+  min-width: 500px;
+  text-align: center;
+  display: flex;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.info {
+  width: 40%;
+  background: rgba(20, 20, 20, .9);
+  padding: 30px;
+}
+
+.input-form {
+  width: 70%;
+  padding: 30px 0;
+  background: rgba(20, 40, 40, .8);
+}
+
+.input-tool-fields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border-bottom: 1px solid var(--cyan);
+  background: rgba(20, 20, 20, .5);
+  color: white;
+}
+
+.form-holder {
+  justify-content: center;
+}
+
+.tag-buttons{
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.type-buttons{
+  text-align: center;
+  justify-content: center;
+  margin: 5%;
+}
+
+.btn-check+.btn{
+  filter: contrast(100%);
+  color: #fff;
+  margin:5px;
+}
+
+.btn-check:checked+.btn{
+  opacity: 100%;
+}
+
+.btn.type{
+  background: rgba(var(--indigo-rgb), 0.3);
+  opacity: 50%;
+}
+
+.btn.react{
+  background-color:  #125D98;
+  opacity: 50%;
+}
+
+.btn.git{
+  background-color: #52006A;
+  opacity: 50%;
+}
+.btn.javascript{
+  background-color: rgb(255, 169, 0);
+  opacity: 50%;
+}
+.btn.html{
+  background-color: rgb(255, 118, 0);
+  opacity: 50%;
+}
+.btn.styling{
+  background-color: #F21170;
+  opacity: 50%;
+}
+.btn.sql{
+  background-color: #CD113B;
+  opacity: 50%;
+}
+.btn.other{
+  background-color: #7952B3;
+  opacity: 50%;
+}
