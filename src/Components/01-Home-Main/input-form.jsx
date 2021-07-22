@@ -118,7 +118,7 @@ export default function ToolInput() {
 
       <div className="info">
           <div className="container" onChange={handleType}>
-            {/* <div className="row type-buttons">
+            <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="resource" />
                 <label className="btn btn type" aria-pressed="true" for="resource">add resource</label>
             </div>
@@ -129,7 +129,7 @@ export default function ToolInput() {
             <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="research" />
                 <label className="btn btn type" for="research">add research item</label>
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -165,7 +165,7 @@ export default function ToolInput() {
                 }} name="tag" id="git" />
                 <label className="btn btn git" for="git">git</label>
 
-                {/* <input type="checkbox" className="btn-check" onChange={() => {
+                <input type="checkbox" className="btn-check" onChange={() => {
                   setTags({ ...tags, javascript: !tags.javascript })
                 }} name="tag" id="javascript" />
                 <label className="btn btn javascript" for="javascript">javascript</label>
@@ -188,7 +188,7 @@ export default function ToolInput() {
                 <input type="checkbox" className="btn-check" onChange={() => {
                   setTags({ ...tags, other: !tags.other })
                 }} name="tag" id="other" />
-                <label className="btn btn other" for="other">other</label> */}
+                <label className="btn btn other" for="other">other</label>
 
                 </div>
               </form>

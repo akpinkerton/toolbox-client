@@ -1,97 +1,93 @@
+.navbar-brand {
+  padding: 23.5px 20px;
+  font-size: 18px
+}
 
-.tool-input {
-  background: url('../../assets/img/galaxy.jpeg');
-  background-size: 100%;
-  width: 80%;
-  min-width: 500px;
+.nav-item {
+  padding: 20px 8px;
+  margin: 0px 3px;
   text-align: center;
-  display: flex;
-  color: white;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.info {
-  width: 40%;
-  background: rgba(20, 20, 20, .9);
-  padding: 30px;
-}
-
-.input-form {
-  width: 70%;
-  padding: 30px 0;
-  background: rgba(20, 40, 40, .8);
-}
-
-.input-tool-fields {
-  margin: 15px 0;
+  border-radius: 5px;
   font-size: 16px;
-  padding: 10px;
-  width: 250px;
-  border-bottom: 1px solid var(--cyan);
-  background: rgba(20, 20, 20, .5);
-  color: white;
+  color: grey;
+  position: static
 }
 
-.form-holder {
-  justify-content: center;
+.nav-item:hover {
+  color: #EF5350
 }
 
-.tag-buttons{
-  display: flex;
-  margin: 10px;
-  justify-content: space-evenly;
-  width: 100%;
-  flex-wrap: wrap;
+a {
+  color: inherit !important
 }
 
-.type-buttons{
-  text-align: center;
-  justify-content: center;
-  margin: 5%;
+.nav-link {
+  padding: 5px
 }
 
-.btn-check+.btn{
-  filter: contrast(100%);
-  color: #fff;
-  margin:5px;
+.navbar-collapse.collapse.in {
+  display: block !important
 }
 
-.btn-check:checked+.btn{
-  opacity: 100%;
+.fa-angle-down {
+  padding-left: 10px
 }
 
-.btn.type{
-  background: rgba(var(--indigo-rgb), 0.3);
-  opacity: 50%;
+.nav-icon {
+  margin: 2px 10px 5px 0px;
+  width: auto;
+  height: 50px
 }
 
-.btn.react{
-  background-color:  #125D98;
-  opacity: 50%;
+.dropdown-menu {
+  margin-top: 0px;
+  border: none;
+  background-color: #F3E5F5;
+  padding: 50px 50px 30px 50px
 }
 
-.btn.git{
-  background-color: #52006A;
-  opacity: 50%;
+#dropdown-menu1 {
+  position: absolute;
+  left: 165px
 }
-.btn.javascript{
-  background-color: rgb(255, 169, 0);
-  opacity: 50%;
+
+#dropdown-menu2 {
+  position: absolute;
+  left: 285px
 }
-.btn.html{
-  background-color: rgb(255, 118, 0);
-  opacity: 50%;
+
+#dropdown-menu3 {
+  position: absolute;
+  left: 415px
 }
-.btn.styling{
-  background-color: #F21170;
-  opacity: 50%;
+
+.tab {
+  margin-bottom: 20px;
+  width: 230px
 }
-.btn.sql{
-  background-color: #CD113B;
-  opacity: 50%;
+
+.tab:hover {
+  color: #E91E63 !important
 }
-.btn.other{
-  background-color: #7952B3;
-  opacity: 50%;
+
+.dropdown-item {
+  padding: 0px
+}
+
+.dropdown-item:hover {
+  background-color: inherit
+}
+
+@media (max-width: 767px) {
+  .nav-item {
+      width: 100%;
+      text-align: left;
+      padding-left: 10px
+  }
+
+  .dropdown-menu {
+      left: 0 !important;
+      position: relative !important;
+      padding: 20px
+  }
 }

@@ -58,40 +58,40 @@
 }
 
 .btn-check:checked+.btn{
-  opacity: 100%;
+  opacity: 1;
 }
 
 .btn.type{
   background: rgba(var(--indigo-rgb), 0.3);
-  opacity: 50%;
+  opacity: .5;
 }
 
 .btn.react{
   background-color:  #125D98;
-  opacity: 50%;
+  opacity: .5;
 }
 
 .btn.git{
   background-color: #52006A;
-  opacity: 50%;
+  opacity: .5;
 }
 .btn.javascript{
   background-color: rgb(255, 169, 0);
-  opacity: 50%;
+  opacity: .5;
 }
 .btn.html{
   background-color: rgb(255, 118, 0);
-  opacity: 50%;
+  opacity: .5;
 }
 .btn.styling{
   background-color: #F21170;
-  opacity: 50%;
+  opacity: .5;
 }
 .btn.sql{
   background-color: #CD113B;
-  opacity: 50%;
+  opacity: .5;
 }
 .btn.other{
   background-color: #7952B3;
-  opacity: 50%;
+  opacity: .5;
 }
