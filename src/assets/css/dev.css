@@ -2,6 +2,15 @@
   border: 2px dotted red;
 }
 
-.dev-mode-white{
+#one{
+  background-color: rgb(137, 137, 201);
+}
+#two{
   background-color: rgb(190, 132, 132);
+}
+#three{
+  background-color: rgb(106, 145, 106);
+}
+#four{
+  background-color: white;
 }

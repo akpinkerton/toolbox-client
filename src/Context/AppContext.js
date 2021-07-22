@@ -1,34 +1,41 @@
 import { createContext, useEffect, useState } from "react";
 
 export const AppContext = createContext();
+export const DevThemeContext = createContext();
+export const UserContext = createContext({ name: 'Guest' });
+
+
+
 
 function AppProvider({ children }) {
   const [state, setState] = useState({
     devStyle: [],
   });
 
-  // this is just a convenience so that we can call a function
-  function getJSON(res) {
-    return res.json();
+  // ================ GET DEV STYLE ================ //
+  async function getDevStyle() {
+    await fetch(`http://localhost:2001/dev`)
+    .then(res => res.json())
+    .then(res => setState({devStyle: res[res.length-1]}))
   }
-
-  // get a product list on load
   useEffect(() => {
-    async function getDevStyle() {
-      const res = await fetch(`http://localhost:2001/dev`);
-      const data = await getJSON(res);
-
-      setState({ devStyle: data });
-    }
     getDevStyle();
-  }, []);
+  }, [])
+
+  // ================ ### ================ //
+
+  // ================ PASS TO CHILDREN ================ //
 
   const globalVals = {
     state,
     setState,
   };
 
-  return <AppContext.Provider value={globalVals}>{children}</AppContext.Provider>;
+  return (
+      <AppContext.Provider value={globalVals}>
+        {children}
+      </AppContext.Provider>
+  )
 }
 
 export default AppProvider;
