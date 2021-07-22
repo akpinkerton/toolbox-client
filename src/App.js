@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../Routes/home'
-import Resources from '../Routes/resources';
-import ReadingList from '../Routes/reading-list';
-import Templates from '../Routes/templates';
-import Navbar from './Navbar'
+import Home from './Routes/home'
+import Resources from './Routes/resources';
+import ReadingList from './Routes/reading-list';
+import Templates from './Routes/templates';
+import Navbar from './Components/Navbar'
 
-import Sandbox from '../Routes/sadbox';
-import Gadgets from '../Routes/gadgets';
-import DevBanner from './000-Dev-Tools/dev';
+import Sandbox from './Routes/sadbox';
+import Gadgets from './Routes/gadgets';
+import DevBanner from './Components/000-Dev-Tools/dev';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
         <Navbar/>
 
-        
+
         <div className="body">
             <Route exact path="/" component={Home} />
             <Route exact path="/sandbox" component={Sandbox} />
