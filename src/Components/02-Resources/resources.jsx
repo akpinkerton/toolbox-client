@@ -14,14 +14,28 @@ import './resources.css'
     }, [])
 
     return (
-      <>
+      <div className="dev-mode-white">
+        <div class="container resources">
         <h1 className="border-bottom">Resources</h1>
+    <div class="resource-card-container">
+
         {inputsRetrieved.map(resource => <>
-              <div>{resource.title}</div>
-              <div>{resource.url}</div>
-              <div>{resource.description}</div>
-              <div>{resource.tags}</div>
+      <div class="overlay"></div>
+      <div class="overlay"></div>
+      <div class="overlay"></div>
+      <div class="overlay"></div>
+      <div class="resource-card">
+        <h4>{resource.title}</h4>
+              <div className='description'>{resource.description}</div>
+              <div className='tags'>{resource.tags}</div>
+        <span className="chev">&rsaquo;</span>
+      </div>
         </>)}
-      </>
+    </div>
+
+</div>
+
+
+      </div>
     )
   }
