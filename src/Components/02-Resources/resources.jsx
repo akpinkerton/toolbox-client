@@ -51,33 +51,22 @@ import link_white from '../../assets/img/link_white.png'
   // ================ DISPLAY ICONS BASED ON TAG ================ //
 
   var tagList = ['Git', 'React', 'Javascript']
-  var iconList = [{ tag: 'React', url: "react.url" },
-                { tag: 'Knex', url: "knex.url" },
-                { tag: 'Styling', url: "styling.url" },
-                { tag: 'Javascript', url: "javascript.url" },
-                { tag: 'Testing', url: "testing.url" },
-                { tag: 'Git', url: "git.url" }]
+  var iconListFull = [{ tag: 'React', url: "react.url" },
+                      { tag: 'Knex', url: "knex.url" },
+                      { tag: 'Styling', url: "styling.url" },
+                      { tag: 'Javascript', url: "javascript.url" },
+                      { tag: 'Testing', url: "testing.url" },
+                      { tag: 'Git', url: "git.url" }]
 
-  function dispIcons (tagList, iconList) {
-    const tagArray = tagList.split(',')
-    //console.log('tag list: ', tagArray)
-    console.log('icons: ', iconList)
-    const result = tagArray.map(tag => iconList.find(toolTag => (toolTag.tag === tag).url
-
-    ));
-
-    console.log('result ', result);
-
-
-      const displayIcons = result.map(url => {
-        return(<>
-        {console.log("url", url)}
-        <img src={url}/>
-        </>)})
-
-        return(displayIcons)
-
+  function dispIcons (resource, iconObj) {
+    const tagArray = resource.split(',')
+    let matching = iconObj.filter(tagPairFromIconObj => (tagArray.includes(tagPairFromIconObj.tag)
+    ))
+    .map(item => item.url)
+    return(<> <img src={matching}/> </>)
   }
+
+
 
 
 
@@ -85,6 +74,18 @@ import link_white from '../../assets/img/link_white.png'
       <div id={`${devStyle.type}`}>
         <div class="container resources">
         <h1 className="border-bottom m-5">Resources</h1>
+
+
+        {/* {icons.map(cat =>  <>
+              {cat.tag}
+
+{console.log('icon map: ', cat.tag)}
+
+              </>)}
+        {console.log('icons: ',  icons[1])}
+            */}
+
+
     <div class="resource-card-container">
         {inputsRetrieved.map(resource => <>
       <div class="resource-card">
@@ -96,10 +97,12 @@ import link_white from '../../assets/img/link_white.png'
         </div>
         <div className='icons'>
         {dispIcons(resource.tags, icons)}
+        {/* {console.log('tag list that comes from resource: ', resource.tags)} */}
         </div>
 
       </div>
         </>)}
+
     </div>
 
 </div>
