@@ -33,6 +33,9 @@ function App() {
       return (<>
             <Route exact path="/" component={Home} />
             <Route exact path="/resources" component={Resources} />
+            <Route exact path="/readinglist" component={ReadingList} />
+            <Route exact path="/templates" component={Templates} />
+
       </>)
     }
   }
