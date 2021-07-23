@@ -1,9 +1,9 @@
 import React from 'react';
-import InputResource from '../Components/01-Home-Main/input'
-import Form from '../Components/01-Home-Main/input-form'
-import List from '../Components/01-Home-Main/list'
+import InputResource from '../Components/01-Home/input'
+import Form from '../Components/01-Home/input-form'
+import List from '../Components/01-Home/list'
 
-import Search from '../Components/01-Home-Main/qk-search'
+import Search from '../Components/01-Home/qk-search'
 
 
 export default function Home() {

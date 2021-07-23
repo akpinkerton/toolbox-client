@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-  export default function Log() {
+  export default function Input() {
+
     return (
       <>
-a gadget
+
       </>
     )
   }
