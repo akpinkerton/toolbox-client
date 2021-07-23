@@ -121,14 +121,9 @@ function handleCheck(e) {
 
   // ================ DISPLAY  ================ //
 
-
-
     return (
       <>
-
-    THIS IS THE INPUT FORM, put div's in ind components so that the home page route component is clean
-
-  <div className="col-md-8 border-test">
+  <div className="col-md-8 input-mod">
     <div className="tool-input">
 
       <div className="info">
@@ -139,7 +134,7 @@ function handleCheck(e) {
             </div>
             <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="template" />
-                <label className="btn btn type" for="template">add template</label>
+                <label className="btn btn type" for="template"><Link to="/templates"> add template</Link></label>
             </div>
             <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="research" />

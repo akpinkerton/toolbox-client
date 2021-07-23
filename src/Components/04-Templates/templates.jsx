@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import TemplateEditor from './editor';
 import './templates.css'
 
   export default function Templates() {
@@ -15,6 +16,7 @@ import './templates.css'
 
     return (
       <>
+        <TemplateEditor/>
         <h1 className="border-bottom">Templates</h1>
         {inputsRetrieved.map(templates => <>
               <div>{templates.title}</div>
