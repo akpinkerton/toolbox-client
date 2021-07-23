@@ -14,9 +14,28 @@ import Sandbox from './Routes/00-sadbox';
 
 function App() {
 
-  const inDevelopment = ''
+  const inDevelopment = () => {
+    if(process.env.NODE_ENV === 'development') {
+      return (<>
+            <Route exact path="/admin" component={Admin} />
+            <Route exact path="/sandbox" component={Sandbox} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/resources" component={Resources} />
+            <Route exact path="/readinglist" component={ReadingList} />
+            <Route exact path="/templates" component={Templates} />
+            <Route exact path="/cheatsheets" component={Cheatsheets} />
+      </>)
+    }
+  }
 
-  const productionReady = ''
+  const productionReady = () => {
+    if(process.env.NODE_ENV === 'production') {
+      return (<>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/resources" component={Resources} />
+      </>)
+    }
+  }
 
 
   return (
@@ -34,14 +53,9 @@ function App() {
 
         <div className="body">
 
+            {inDevelopment()}
+            {productionReady()}
 
-            <Route exact path="/" component={Home} />
-            <Route exact path="/admin" component={Admin} />
-            <Route exact path="/sandbox" component={Sandbox} />
-            <Route exact path="/resources" component={Resources} />
-            <Route exact path="/readinglist" component={ReadingList} />
-            <Route exact path="/templates" component={Templates} />
-            <Route exact path="/cheatsheets" component={Cheatsheets} />
 
         </div>
       </div>
