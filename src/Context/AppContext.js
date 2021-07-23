@@ -12,16 +12,6 @@ function AppProvider({ children }) {
     devStyle: [],
   });
 
-  // ================ GET DEV STYLE ================ //
-  async function getDevStyle() {
-    await fetch(`http://localhost:2001/dev`)
-    .then(res => res.json())
-    .then(res => setState({devStyle: res[res.length-1]}))
-  }
-  useEffect(() => {
-    getDevStyle();
-  }, [])
-
   // ================ ### ================ //
 
   // ================ PASS TO CHILDREN ================ //

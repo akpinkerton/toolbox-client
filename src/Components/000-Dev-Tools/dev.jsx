@@ -11,7 +11,6 @@ export default function DevBanner() {
   console.log("style from context: ", devStyle.type);
   const [update, updState] = useState(0);
 
-
   function updateState() {
     updState(prev => prev + 1)
   }
@@ -39,8 +38,7 @@ export default function DevBanner() {
     postMode();
   }, [mode]);
 
-  // ================ GET MODE ================ //
-
+  // ================ GET FROM CONTEXT ================ //
   async function getDevStyle() {
     await fetch(`http://localhost:2001/dev`)
     .then(res => res.json())
@@ -50,6 +48,8 @@ export default function DevBanner() {
     getDevStyle();
   }, [update])
 
+
+  // ================ DEV ELEMENTS ================ //
   const banner = () => {
     if (process.env.NODE_ENV !== "production") {
       return (
