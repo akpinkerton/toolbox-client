@@ -28,7 +28,7 @@ const { devStyle } = state;
     getInputs();
   }, [currentItems])
 
-// ================ GET RESOURCES ================ //
+// ================ GET ICONS ================ //
 
     const[icons, setIcons] = useState([]);
 
@@ -72,8 +72,13 @@ function urlFormat(url) {
 
 function dispIcons (resource, iconObj) {
   console.log('Seeded Tag List: ', resource)
+  console.log('icon object', iconObj)
   const tagArray = resource.split(',')
+  console.log('tagArray', tagArray)
+
   let matching = iconObj.filter(tagPairFromIconObj => (tagArray.includes(tagPairFromIconObj.tag)))
+  console.log('Matching', matching)
+
   let tagUrl = matching.map(item => item.url)
   return(<img src={tagUrl}/>)
 }
