@@ -3,8 +3,6 @@ import InputResource from '../Components/01-Home/input'
 import Form from '../Components/01-Home/input-form'
 import List from '../Components/01-Home/list'
 
-import Search from '../Components/01-Home/qk-search'
-
 
 export default function Home() {
   return (<>
@@ -12,22 +10,10 @@ export default function Home() {
 
   <div class="container-fluid">
   <InputResource/>
-
       <div class="row">
-
-  <Form/>
-  <List/>
-
+        <Form/>
+        <List/>
       </div>
-
-
-
-      <div class="row">
-
-  <Search/>
-
-      </div>
-
   </div>
 
   </>);

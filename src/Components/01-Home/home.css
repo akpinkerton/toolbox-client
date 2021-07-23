@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+.input-mod{
+  display: flex;
+  justify-content: space-around;
+}
+
 .info {
   width: 40%;
   background: rgba(20, 20, 20, .9);
