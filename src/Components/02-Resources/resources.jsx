@@ -17,15 +17,16 @@ const { devStyle } = state;
 // ================ GET RESOURCES ================ //
 
   const[inputsRetrieved, setInputsRetrieved] = useState([]);
+  const [currentItems, setCurrentItems] = useState(false);
 
-  async function getInputs() {
-    await fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/resources`)
+  function getInputs() {
+     fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/resources`)
     .then(res => res.json())
-    .then(res => setInputsRetrieved(res))
+    .then(json => setInputsRetrieved(json))
   }
   useEffect(() => {
     getInputs();
-  }, [])
+  }, [currentItems])
 
 // ================ GET RESOURCES ================ //
 
@@ -40,6 +41,24 @@ const { devStyle } = state;
       getIcons();
     }, [])
 
+// ================ DELETE RESOURCES ================ //
+
+const deleteItem = (id) => {
+  fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/resources`, {
+    method: 'DELETE',
+    body: JSON.stringify({ id: id }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+  setCurrentItems(true)
+}
+
+useEffect(() => {
+  setCurrentItems(false)
+}, [inputsRetrieved])
+
 // ================ URL FORMATTING ================ //
 
 function urlFormat(url) {
@@ -50,7 +69,9 @@ function urlFormat(url) {
 
 // ================ DISPLAY ICONS BASED ON TAG ================ //
 
+
 function dispIcons (resource, iconObj) {
+  console.log('Seeded Tag List: ', resource)
   const tagArray = resource.split(',')
   let matching = iconObj.filter(tagPairFromIconObj => (tagArray.includes(tagPairFromIconObj.tag)))
   let tagUrl = matching.map(item => item.url)
@@ -60,7 +81,7 @@ function dispIcons (resource, iconObj) {
 // ================ DISPLAY ================ //
 
   return (
-    <div id={`${devStyle.type}`}>
+    <div id='{`${theme.type}`}'>
       <div class="container resources">
         <h1 className="border-bottom m-5">Resources</h1>
 
@@ -73,6 +94,7 @@ function dispIcons (resource, iconObj) {
                   <div className='description'>{resource.description}</div>
                   <div className='tags'>{resource.tags}</div>
                 <img src={link_white}/><a href={resource.url} className='url'>{urlFormat(resource.url)}</a>
+                <button className='btn btn' onClick={(() => deleteItem(resource.id))}>delete</button>
               </div>
 
               <div className='icons'>

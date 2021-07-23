@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './home.css'
 
@@ -11,23 +11,13 @@ export default function ToolInput() {
   const [resources, setResources] = useState({})
   const [templates, setTemplates] = useState({})
   const [researchItems, setResearchItems] = useState({})
+  const [tags, setTags] = useState ([])
+  const [tagString, setTagString] = useState('')
 
-  const [tags, setTags] = useState(
-    {
-      react: false,
-      git: false,
-      javascript: false,
-      html: false,
-      styling: false,
-      sql: false,
-      other: false
-    }
-  )
 
   function handleType(e) {
     setType(e.target.id)
   }
-
 
   function handleTitleInput(e) {
     setTitle(e.target.value)
@@ -37,26 +27,41 @@ export default function ToolInput() {
   function handleUrlInput(e) {
     setUrl(e.target.value)
     console.log('url:', url)
-
   }
 
   function handleDescription(e) {
     setDescription(e.target.value)
   }
 
-  function handleSubmit() {
-    setInputs({ type: type, title: title, url: url, description: description, tags: tags })
-    setResources({ title: title, url: url, description: description, tags: tags })
-    setTemplates({ title: title, content: description, tags: tags })
-    setResearchItems({ title: title, url: url, description: description, tags: tags })
 
+function handleCheck(e) {
+  if (e.target.checked) {
+    setTags([...tags, e.target.value])
+  } else {
+    setTags(tags.filter(tag => tag !== e.target.value))
+  }
+}
+
+
+// ================ SUBMIT ================ //
+
+  function handleSubmit() {
+
+    setInputs({ type: type, title: title, url: url, description: description, tags: tagString })
+    setResources({ title: title, url: url, description: description, tags: tagString })
+    setTemplates({ title: title, content: description, tags: tagString })
+    setResearchItems({ title: title, url: url, description: description, tags: tagString })
     setTitle('')
     setDescription('')
     setUrl('')
+
     console.log('Inputs are now: ', inputs)
     console.log(`Operating in `, {ENVIRONMENT: process.env.NODE_ENV})
     console.log(`Server Endpoint `,{SERVER_ENDPOINT: process.env.REACT_APP_SERVER_ENDPOINT })
   }
+
+// ================ POST TO SERVER ================ //
+
 
   function postResource() {
     fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/resources`, {
@@ -106,6 +111,16 @@ export default function ToolInput() {
       }
     }
   }, [inputs])
+
+  useEffect(() => {
+    const selectedTagString = tags.join(', ')
+    console.log('selected tags as string: ', selectedTagString)
+    setTagString(selectedTagString)
+  })
+
+
+  // ================ DISPLAY  ================ //
+
 
 
     return (
@@ -157,37 +172,25 @@ export default function ToolInput() {
           <div className="form-holder">
               <form>
                 <div className="tag-buttons">
-                  <input type="checkbox" className="btn-check" name="tag" onChange={() => {setTags({ ...tags, react: !tags.react })}} id="react" />
+                  <input type="checkbox" className="btn-check" name="tag" onChange={handleCheck} id="react" value="React" />
                   <label className="btn btn react" for="react">react</label>
 
-                  <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, git: !tags.git })
-                }} name="tag" id="git" />
+                  <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="git" value="Git" />
                 <label className="btn btn git" for="git">git</label>
 
-                <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, javascript: !tags.javascript })
-                }} name="tag" id="javascript" />
+                <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="javascript" value="Javascript" />
                 <label className="btn btn javascript" for="javascript">javascript</label>
 
-                <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, html: !tags.html })
-                }} name="tag" id="html" />
-                <label className="btn btn html" aria-pressed="true" for="html">html</label>
+                <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="html" value="HTML" />
+                <label className="btn btn html" for="html">html</label>
 
-                <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, styling: !tags.styling })
-                }} name="tag" id="styling" />
+                <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="styling" value="Styling" />
                 <label className="btn btn styling" for="styling">styling</label>
 
-                <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, sql: !tags.sql })
-                }} name="tag" id="sql" />
+                <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="sql" value="SQL" />
                 <label className="btn btn sql" for="sql">sql</label>
 
-                <input type="checkbox" className="btn-check" onChange={() => {
-                  setTags({ ...tags, other: !tags.other })
-                }} name="tag" id="other" />
+                <input type="checkbox" className="btn-check" onChange={handleCheck} name="tag" id="other" value="Other" />
                 <label className="btn btn other" for="other">other</label>
 
                 </div>

@@ -8,7 +8,6 @@ export default function DevBanner() {
   // ================ CONTEXT VARS ================ //
   const { state, setState } = useContext(AppContext);
   const { devStyle } = state;
-  console.log("style from context: ", devStyle.type);
   const [update, updState] = useState(0);
 
   function updateState() {
@@ -31,7 +30,6 @@ export default function DevBanner() {
         "Content-Type": "application/json",
       },
     });
-    console.log("Posted mode", mode);
   }
 
   useEffect(() => {
