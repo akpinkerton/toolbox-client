@@ -1,7 +1,7 @@
 import React from 'react';
-import Display from '../Components/04-Templates/templates';
+import Display from '../Components/04-Templates/text-area';
 
-export default function Templates() {
+export default function Resources() {
   return <>
     <Display/>
   </>;

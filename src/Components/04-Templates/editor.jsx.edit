@@ -21,12 +21,14 @@ import './templates.css'
     const [editorState, setEditorState] = useState(
       () => EditorState.createEmpty(),
     );
+
     const  [convertedContent, setConvertedContent] = useState(null);
 
     const handleEditorChange = (state) => {
       setEditorState(state);
       convertContentToHTML();
     }
+
     const convertContentToHTML = () => {
       let currentContentAsHTML = convertToHTML(editorState.getCurrentContent());
       setConvertedContent(currentContentAsHTML);
@@ -37,6 +39,9 @@ import './templates.css'
         __html: DOMPurify.sanitize(html)
       }
     }
+
+    console.log('create markup: ', JSON.stringify(convertedContent))
+
 // ================ HANDLERS ================ //
 
     function handleTitleInput(e) {
@@ -50,7 +55,7 @@ import './templates.css'
     }
 
     function handleDescription(e) {
-      setDescription(e.target.value)
+      setDescription(convertedContent)
     }
 
 
@@ -76,8 +81,6 @@ import './templates.css'
       setTitle('')
       setDescription('')
       setUrl('')
-
-
     }
 
 
@@ -102,34 +105,19 @@ import './templates.css'
     }, [inputs])
 
     return (<>
-        <header className="editor-header">
-          Rich Text Editor Example
-        </header>
-      <div className="editor-container d-flex">
-      <form className="editor border-test col-6">
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={handleEditorChange}
-          editorClassName="editor-class"
-          toolbarClassName="toolbar-class"
-        />
-        <input type="submit" value="Submit" onClick={handleSubmit} className='btn-submit'/>
-
-      </form>
-
-        <div className="preview border-test col-6" dangerouslySetInnerHTML={createMarkup(convertedContent)}></div>
-    </div>
 
 
 
 
-    <div className="col-md-8 input-mod">
+    <div className="input-mod">
     <div className="tool-input">
 
-      <form className="container input-form">
-        <h2>Add to your Toolbox</h2>
+        <div className="info">
+            <div className="preview border-test col-6" dangerouslySetInnerHTML={createMarkup(convertedContent)}></div>
+        </div>
 
 
+      <form className="container d-flex flex-wrap input-form">
           <div className='form-input'>
             <label for="title"></label>
             <input type="text" className="input-tool-fields" id="title" placeholder="title..." value={title} onChange={handleTitleInput} required/>
@@ -144,6 +132,21 @@ import './templates.css'
             <label for="description"></label>
             <input type="text" className="input-tool-fields" id="description" placeholder="description..." value={description} onChange={handleDescription} required/>
           </div>
+
+
+      <div className="editor-container d-flex">
+      <form className="editor border-test">
+
+        <Editor
+          editorState={editorState}
+          onEditorStateChange={handleEditorChange}
+          editorClassName="editor-class"
+          toolbarClassName="toolbar-class"
+        />
+
+      </form>
+
+    </div>
 
           <div className="form-holder">
               <form>

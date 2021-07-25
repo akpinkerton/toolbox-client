@@ -49,7 +49,7 @@ function App() {
 
 <DevBanner/>
 
-			<h1> 	TITLE </h1>
+			<h1> Toolbox </h1>
 
         <Navbar/>
 
