@@ -18,7 +18,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
         </li>
 
         <li class="nav-item">
-          <Link class="nav-link" to="/readinglist"> Reading List</Link>
+          <Link class="nav-link" to="/readinglist"> Research List</Link>
         </li>
 
         <li class="nav-item">
