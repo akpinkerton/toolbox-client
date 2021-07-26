@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
           <div><Link to="/resources"> Resources</Link></div>
           <div><Link to="/readinglist"> Reading List</Link></div>
           <div><Link to="/templates"> Templates</Link></div>
-          <div><Link to="/cheatsheets"> Cheatsheets</Link></div>
+          {/* <div><Link to="/cheatsheets"> Cheatsheets</Link></div> */}
           <div><Link to="/admin"> Account Settings</Link></div>
         </div>
       </nav>
