@@ -12,6 +12,7 @@ SPA that allows a user to store and keep up with tools, tips, tricks, and resour
 - Commands
 - Functionality
 - Tasks
+- Issues
 - Advanced Goals
 - Future adds
 
@@ -40,11 +41,43 @@ SPA that allows a user to store and keep up with tools, tips, tricks, and resour
 - [X] Basic CSS implementation
 - [X] Deploy this application via AWS or Heroku
 
+### Issues
+- [ ] Icons do not display for all tags, only the first tag
+- [ ] URL has to be exact to work on maps
+---
 
 ### Advanced Goals
-
+- [ ] Add log in option to store ind user data
 
 ### In future updates
+
+##### Home Pag
+- [ ] make description input box able to be styled to allow for code inputs
+- [ ] support file uploads of templates
+  - file upload is simple, the hold up was storing in the DB and retrieving.
+
+##### Admin Page
+- Recycle/Trash bin
+  - [ ] holds all deleted items
+  - [ ] POST to an archive sheet
+  - [ ] option to delete perm form archive or send back to its db
+- [ ] Add/Edit/Delete a tags
+  - [ ] input icon html src from icons8
+  - [ ] map these onto input form  (buttons or checklist)
+
+##### Research List
+ - [ ] Add a 'file away' option that you can add the research item to resources
+
+##### Styling
+ - [ ] Toggle Theme
+
+##### Create Pages
+- [ ] Cheatsheets
+  - [ ] display in a list using accordion to organize by topic
+- [ ] Brain Gym
+  - [ ] tools that increase skills like games and challenge websites
+- [ ] Repos
+  - [ ] to store all personal and outside repos with tags to be included in searches
 
 
 ---
