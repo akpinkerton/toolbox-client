@@ -1,6 +1,6 @@
 import {useState, useEffect, useContext} from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './home.css'
+import './home_style.css'
 
 export default function ToolInput() {
   const [type, setType] = useState('research');

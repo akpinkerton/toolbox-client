@@ -1,51 +1,21 @@
-import {useState, useEffect, useContext} from 'react';
+import React, { Component } from 'react';
 
-export default function CheckBox() {
-        const [cities, setCities] = useState([])
-
-        useEffect(() => {
-          console.log(cities)
-        })
-
-        const handleCheck = (e) => {
-          if (e.target.checked) {
-            setCities([...cities, e.target.value])
-          } else {
-            removeCities()
-          }
-        }
-
-        const removeCities = () => {
-          setCities(() => cities.splice(cities.length - 1, 1))
-        }
-
+export default class FilesUploadComponent extends Component {
+    render() {
         return (
-          <>
-            <form>
-              <input type="checkbox"
-                id="1"
-                label="Dublin"
-                value="dublin"
-                name="dublin"
-                onChange={handleCheck}
-              />
-              <input type="checkbox"
-                id="2"
-                label="New York"
-                value="New York"
-                name="new-york"
-                onChange={handleCheck}
-              />
-              <input type="checkbox"
-                id="3"
-                label="Torino"
-                value="Torino"
-                name="torino"
-                onChange={handleCheck}
-              />
-            </form>
-          </>
+            <div className="container">
+                <div className="row">
+                    <form>
+                        <h3>React File Upload</h3>
+                        <div className="form-group">
+                            <input type="file" />
+                        </div>
+                        <div className="form-group">
+                            <button className="btn btn-primary" type="submit">Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         )
-      
-
+    }
 }

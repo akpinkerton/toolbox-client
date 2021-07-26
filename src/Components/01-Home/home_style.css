@@ -2,7 +2,7 @@
 .tool-input {
   background: url('../../assets/img/galaxy.jpeg');
   background-size: 100%;
-  width: 80%;
+  width: 90%;
   min-width: 500px;
   text-align: center;
   display: flex;
@@ -11,10 +11,34 @@
   overflow: hidden;
 }
 
+.inputs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type="text"], input[type="url"]{
+  width: 325px;
+}
+
+textarea[type="text"]{
+  width: 675px;
+  min-height: 150px;
+}
+
+.form-input{
+  margin: 0 10px;
+}
+
+.input-mod{
+  display: flex;
+  justify-content: space-around;
+}
+
 .info {
   width: 40%;
   background: rgba(20, 20, 20, .9);
-  padding-top: 30px;
+  padding: 85px 10px 0px 10px;
 }
 
 .input-form {

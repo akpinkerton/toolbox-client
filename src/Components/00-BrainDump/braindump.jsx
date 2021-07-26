@@ -1,46 +1,72 @@
-import React, { Component } from "react";
+import {useState, useEffect, useContext} from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-class Left extends Component {
-    state = {
-        languages: []
+export default function TextArea() {
+  const [file_name, setFile_Name] = useState('');
+  const [file, setFile] = useState('');
+  const [upload, setUpload] = useState({})
+  var form = document.getElementById("myForm");
+
+
+  function handleFile(e) {
+    setFile(e.target.value)
+    console.log('Upload is now: ', upload)
+
+  }
+
+
+// ================ SUBMIT ================ //
+
+  function handleSubmit() {
+
+    setUpload({ file_name: file_name, file: file})
+
+    console.log(`Operating in `, {ENVIRONMENT: process.env.NODE_ENV})
+    console.log(`Server Endpoint `,{SERVER_ENDPOINT: process.env.REACT_APP_SERVER_ENDPOINT })
+  }
+
+// ================ POST TO SERVER ================ //
+
+  function postFile() {
+    fetch(`${process.env.REACT_APP_SERVER_ENDPOINT}/uploads`, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'multipart/form-data.',
+        'Content-Type': 'multipart/form-data.'
+      }
+    })
+    console.log('Posted File', upload)
+  }
+
+
+  useEffect(() => {
+    if (upload.type !== undefined) {
+      postFile()
     }
-    onChange = (event) =>{
-        //console.log(event.target.checked);
-        const isChecked = event.target.checked;
-        if(isChecked){
-            this.setState({ languages: [...this.state.languages, event.target.value] });
-        }else{
-            let index = this.state.languages.indexOf(event.target.value);
-            this.state.languages.splice(index, 1);
-            this.setState({ languages: this.state.languages });
-        }
-    }
-    onSubmit = (event) =>{
-        event.preventDefault();
-       // console.log(this.state.languages);
-    }
-    render() {
-        return (
-            <div className='checks'>
-                <form onSubmit={this.onSubmit}>
-                <p>Select languages.</p>
-                <input type="checkbox" name="languages" value="French" onChange={this.onChange}/>
-                <label htmlFor="language1"> French</label><br />
-                <input type="checkbox" name="languages" value="Spanish" onChange={this.onChange}/>
-                <label htmlFor="language2"> Spanish</label><br />
-                <input type="checkbox" name="languages" value="German" onChange={this.onChange}/>
-                <label htmlFor="language3"> German</label><br />
-                <input type="checkbox" name="languages" value="Hindi" onChange={this.onChange}/>
-                <label htmlFor="language4"> Hindi</label><br />
-                <input type="checkbox" name="languages" value="Japanese" onChange={this.onChange}/>
-                <label htmlFor="language5"> Japanese</label><br />
-                <input type="checkbox" name="languages" value="Mandarin" onChange={this.onChange}/>
-                <label htmlFor="language6"> Mandarin</label>
-                <br />
-                <input type='submit' value='Submit'/>
-                </form>
-            </div>
-        );
-    }
-}
-export default Left;
+  }, [upload])
+
+
+  // ================ DISPLAY  ================ //
+
+    return (
+      <>
+  <div className="col-md-8 input-mod">
+      <form id="myform" className="container input-form">
+
+          <div className='form-input'>
+            <label for="file"></label>
+            <input type="file" className="input-tool-fields" id="file" placeholder="file..." value={file} onChange={handleFile} required/>
+          </div>
+
+          <div className='form-submit'>
+            <input type="submit" value="Submit" onClick={handleSubmit} className='btn-submit'/>
+          </div>
+
+      </form>
+  </div>
+
+
+      </>
+    )
+  }
