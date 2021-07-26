@@ -3,8 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import './resources.css'
 import { AppContext } from "../../Context/AppContext";
 import link_white from '../../assets/img/link_white.png'
-import ScrollButton from "../../assets/objects/ScrollButton";
-
+import DeleteButton from '../../assets/objects/DeleteButton'
 
 export default function Resources() {
 
@@ -63,8 +62,10 @@ useEffect(() => {
 // ================ URL FORMATTING ================ //
 
 function urlFormat(url) {
+  console.log('url:', url)
   var website = new URL(url)
   var host = website.host;
+  console.log('host:', host)
   return host;
 }
 
@@ -100,8 +101,9 @@ function dispIcons (resource, iconObj) {
                   <div className='description'>{resource.description}</div>
                   <div className='tags'>{resource.tags}</div>
                 <img src={link_white}/><a href={resource.url} className='url'>{urlFormat(resource.url)}</a>
-                <button className='btn btn' onClick={(() => deleteItem(resource.id))}>delete</button>
               </div>
+                <div onClick={(() => deleteItem(resource.id))}><DeleteButton/></div>
+
 
               <div className='icons'>
                 {dispIcons(resource.tags, icons)}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './readinglist.css'
 import link_white from '../../assets/img/link_white.png'
+import DeleteButton from '../../assets/objects/DeleteButton'
 
 
   export default function ReadingList() {
@@ -88,9 +89,9 @@ import link_white from '../../assets/img/link_white.png'
                   <div className='tags'>{list.status}</div>
                   <div className='tags'>{list.tags}</div>
                 <img src={link_white}/><a href={list.url} className='url'>{urlFormat(list.url)}</a>
-                <button className='btn btn' onClick={(() => deleteItem(list.id))}>delete</button>
-              </div>
 
+              </div>
+              <div onClick={(() => deleteItem(list.id))}><DeleteButton/></div>
               <div className='icons'>
                 {dispIcons(list.tags, icons)}
               </div>

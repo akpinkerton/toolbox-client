@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import DeleteButton from '../../assets/objects/DeleteButton'
 import './templates.css'
 
 
@@ -81,9 +82,8 @@ function dispIcons (template, iconObj) {
                 <h4 className='title'>{template.title}</h4>
                   <div className='description'>{template.description}</div>
                   <div className='tags'>{template.tags}</div>
-                <button className='btn btn' onClick={(() => deleteItem(template.id))}>delete</button>
               </div>
-
+              <div onClick={(() => deleteItem(template.id))}><DeleteButton/></div>
               <div className='icons'>
                 {dispIcons(template.tags, icons)}
               </div>

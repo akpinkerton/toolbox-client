@@ -1,5 +1,65 @@
 @import '../formatting/colors.css';
 
+
+/* // ================ SCROLL BUTTON ================ // */
+
+.scroll-btn {
+  text-align: right;
+  margin: 30px 10px 10px 10px;
+  cursor: pointer;
+}
+
+/* // ================ TRASH BUTTON ================ // */
+
+.trash-btn {
+  cursor: pointer;
+  transition: .4s;
+  margin: 10px;
+  max-width: 40px;
+  height: auto;
+  opacity: .4;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+.trash-btn:hover {
+  opacity: 1;
+}
+
+  /* // ================ SUBMIT BUTTONS ================ // */
+
+.btn-submit {
+  cursor: pointer;
+  transition: .4s;
+  color: #fff;
+  background: rgba(var(--indigo-rgb), 0.3);
+  margin-top: 20px;
+  padding: 10px 50px;
+  border-color: var(--indigo);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
+.btn-submit:hover {
+  color: #fff;
+  background-color: var(--indigo);
+  border-color: var(--indigo); }
+.btn-submit:focus, .btn-submit.focus {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(13, 226, 234, 0.5); }
+.btn-submit.disabled, .btn-submit:disabled {
+  color: #fff;
+  background-color: var(--indigo);
+  border-color: var(--indigo); }
+.btn-submit:not(:disabled):not(.disabled):active, .btn-submit:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: var(--indigo);
+  border-color: #0aa8ae; }
+.btn-submit:not(:disabled):not(.disabled):active:focus, .btn-submit:not(:disabled):not(.disabled).active:focus{
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(13, 226, 234, 0.5); }
+
+
+
+
+/* // ================ THEME BUTTONS ================ // */
+
+
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -35,31 +95,11 @@
             fieldset:disabled a.btn {
               pointer-events: none; }
 
-.btn-submit {
-  cursor: pointer;
-  transition: .4s;
-  color: #fff;
-  background: rgba(var(--indigo-rgb), 0.3);
-  margin-top: 20px;
-  padding: 10px 50px;
-  border-color: var(--indigo);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075); }
-.btn-submit:hover {
-  color: #fff;
-  background-color: var(--indigo);
-  border-color: var(--indigo); }
-.btn-submit:focus, .btn-submit.focus {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(13, 226, 234, 0.5); }
-.btn-submit.disabled, .btn-submit:disabled {
-  color: #fff;
-  background-color: var(--indigo);
-  border-color: var(--indigo); }
-.btn-submit:not(:disabled):not(.disabled):active, .btn-submit:not(:disabled):not(.disabled).active {
-  color: #fff;
-  background-color: var(--indigo);
-  border-color: #0aa8ae; }
-.btn-submit:not(:disabled):not(.disabled):active:focus, .btn-submit:not(:disabled):not(.disabled).active:focus{
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(13, 226, 234, 0.5); }
+
+
+
+
+
 
 .btn-primary {
   color: #fff;
@@ -113,20 +153,6 @@
     background-color: #770937;
     border-color: #CCD8E0;
   }
-
-
-
-.scroll-btn {
-  text-align: right;
-  margin: 10px;
-  cursor: pointer;
-}
-
-
-
-
-
-
 
   .btn-time {
     color: #212529;

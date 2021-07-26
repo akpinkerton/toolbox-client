@@ -33,6 +33,7 @@
   padding: 15px 20px;
   margin: 10px 5px;
   justify-content: space-between;
+  position: relative;
 }
 
 .template-card .content {
