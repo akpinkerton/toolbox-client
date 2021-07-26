@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import trash from '../img/trash.png'
 
-export default function ScrollToTop() {
+export default function DeleteButton() {
 
 
   return (
-    <div > <img className="trash-btn" src={trash}/> </div>
+    <div > <img className="trash-btn" alt='' src={trash}/> </div>
   );
 }
 

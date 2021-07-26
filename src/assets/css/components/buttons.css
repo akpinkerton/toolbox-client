@@ -26,6 +26,53 @@
   opacity: 1;
 }
 
+/* // ================ EDIT BUTTON ================ // */
+
+.edit-btn {
+  cursor: pointer;
+  transition: .4s;
+  margin: 10px;
+  max-width: 40px;
+  height: auto;
+  opacity: .4;
+  position: absolute;
+  right: 10px;
+}
+.edit-btn:hover {
+  opacity: 1;
+}
+
+/* // ================ STATUS BUTTONS ================ // */
+
+.btn-check:checked+.btn{
+  opacity: 1;
+}
+
+.btn-check+.btn{
+  filter: contrast(100%);
+  color: #fff;
+}
+
+.btn.new{
+  background-color: #E74C3C;
+  opacity: .5;
+  font-size: .8em;
+
+}
+
+.btn.prog{
+  background-color: #F1C40F;
+  opacity: .5;
+  font-size: .8em;
+}
+
+.btn.done{
+  background-color: #2ECC71;
+  opacity: .5;
+  font-size: .8em;
+
+}
+
   /* // ================ SUBMIT BUTTONS ================ // */
 
 .btn-submit {
