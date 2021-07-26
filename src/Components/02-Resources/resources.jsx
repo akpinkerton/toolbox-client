@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import './resources.css'
 import { AppContext } from "../../Context/AppContext";
 import link_white from '../../assets/img/link_white.png'
+import ScrollButton from "../../assets/objects/ScrollButton";
 
 
 export default function Resources() {

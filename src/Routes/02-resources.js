@@ -1,10 +1,10 @@
 import React from 'react';
 import Display from '../Components/02-Resources/resources';
-import ScrollUpButton from "react-scroll-up-button";
+import ScrollButton from "../assets/objects/ScrollButton"
 
 export default function Resources() {
   return <>
     <Display/>
-    <ScrollUpButton/>
+    <ScrollButton/>
   </>;
 }

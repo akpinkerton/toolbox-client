@@ -116,6 +116,18 @@
 
 
 
+.scroll-btn {
+  text-align: right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
   .btn-time {
     color: #212529;
     min-width: 70px;
