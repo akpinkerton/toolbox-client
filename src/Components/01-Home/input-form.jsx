@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './home.css'
 
 export default function ToolInput() {
-  const [type, setType] = useState('');
+  const [type, setType] = useState('research');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [url, setUrl] = useState('');
@@ -123,7 +123,7 @@ function handleCheck(e) {
 
     return (
       <>
-  <div className="col-md-8 input-mod">
+  <div className="input-mod m-5">
     <div className="tool-input">
 
       <div className="info">
@@ -134,7 +134,8 @@ function handleCheck(e) {
             </div>
             <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="template" />
-                <label className="btn btn type" for="template"><Link to="/templates"> add template</Link></label>
+                {/* <label className="btn btn type" for="template"><Link to="/templates"> add template</Link></label> */}
+                <label className="btn btn type" for="template">add template</label>
             </div>
             <div className="row type-buttons">
                 <input type="radio" className="btn-check" name="tag" id="research" />
@@ -145,10 +146,10 @@ function handleCheck(e) {
 
 
 
-      <form className="container input-form">
+      <form className="container input-form pb-3">
         <h2>Add to your Toolbox</h2>
 
-
+        <div className='inputs'>
           <div className='form-input'>
             <label for="title"></label>
             <input type="text" className="input-tool-fields" id="title" placeholder="title..." value={title} onChange={handleTitleInput} required/>
@@ -161,8 +162,10 @@ function handleCheck(e) {
 
           <div className='form-input'>
             <label for="description"></label>
-            <input type="text" className="input-tool-fields" id="description" placeholder="description..." value={description} onChange={handleDescription} required/>
+            <textarea type="text" className="input-tool-fields" id="description" placeholder="description..." value={description} onChange={handleDescription} required/>
           </div>
+        </div>
+
 
           <div className="form-holder">
               <form>
