@@ -102,11 +102,18 @@ const updateStatus = async (id) => {
 
 // ================ URL FORMATTING ================ //
 
-    function urlFormat(url) {
-      var website = new URL(url)
-      var host = website.host;
-      return host;
-    }
+function urlFormat(url) {
+
+  if(url){
+    console.log('url:', url)
+    var website = new URL(url)
+    var host = website.host;
+    console.log('host:', host)
+    return host;
+  } else {
+    return '';
+  }
+}
 
 // ================ GET ICONS ================ //
 
@@ -128,6 +135,7 @@ const updateStatus = async (id) => {
       const tagArray = resource.split(',')
       let matching = iconObj.filter(tagPairFromIconObj => (tagArray.includes(tagPairFromIconObj.tag)))
       let tagUrl = matching.map(item => item.url)
+      console.log('matching: ',matching)
       return(<img src={tagUrl}/>)
     }
 
@@ -185,7 +193,7 @@ const updateStatus = async (id) => {
                     </div>
                     <div className="modal-footer">
                       <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" className="btn btn-primary" onClick={(() => updateStatus(list.id))}>Save changes</button>
+                      <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={(() => updateStatus(list.id))}>Save changes</button>
                     </div>
                   </div>
                 </div>
