@@ -3,7 +3,7 @@
   background: url('../../assets/img/galaxy.jpeg');
   background-size: 100%;
   width: 90%;
-  min-width: 500px;
+  min-width: 600px;
   text-align: center;
   display: flex;
   color: white;
@@ -17,17 +17,23 @@
   justify-content: center;
 }
 
+.sm-inputs{
+  display: flex;
+  width: 100%;
+}
+
 input[type="text"], input[type="url"]{
-  width: 325px;
+  width: 100%;
 }
 
 textarea[type="text"]{
-  width: 675px;
+  width: 100%;
   min-height: 150px;
 }
 
 .form-input{
   margin: 0 10px;
+  width: 100%;
 }
 
 .input-mod{

@@ -150,14 +150,16 @@ function handleCheck(e) {
         <h2>Add to your Toolbox</h2>
 
         <div className='inputs'>
-          <div className='form-input'>
-            <label for="title"></label>
-            <input type="text" className="input-tool-fields" id="title" placeholder="title..." value={title} onChange={handleTitleInput} required/>
-          </div>
+          <div className='sm-inputs'>
+            <div className='form-input'>
+              <label for="title"></label>
+              <input type="text" className="input-tool-fields" id="title" placeholder="title..." value={title} onChange={handleTitleInput} required/>
+            </div>
 
-          <div className='form-input'>
-            <label for="url"></label>
-            <input type="url" className="input-tool-fields" id="url" placeholder="url..." value={url} onChange={handleUrlInput} required/>
+            <div className='form-input'>
+              <label for="url"></label>
+              <input type="url" className="input-tool-fields" id="url" placeholder="url..." value={url} onChange={handleUrlInput} required/>
+            </div>
           </div>
 
           <div className='form-input'>
