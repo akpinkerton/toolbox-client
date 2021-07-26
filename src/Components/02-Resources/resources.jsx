@@ -105,11 +105,11 @@ function dispIcons (resource, iconObj) {
               <div className='icons'>
                 {dispIcons(resource.tags, icons)}
               </div>
-
             </div>
           </>)}
         </div>
       </div>
+
     </div>
   )
 }
