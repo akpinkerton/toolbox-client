@@ -80,6 +80,28 @@ function dispIcons (template, iconObj) {
 
               <div className='content'>
                 <h4 className='title'>{template.title}</h4>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    View...
+                  </button>
+
+                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">{template.title}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        {template.content}
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div className='description'>{template.description}</div>
                   <div className='tags'>{template.tags}</div>
               </div>
@@ -87,6 +109,8 @@ function dispIcons (template, iconObj) {
               <div className='icons'>
                 {dispIcons(template.tags, icons)}
               </div>
+
+
 
             </div>
           </>)}
